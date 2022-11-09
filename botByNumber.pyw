@@ -11,12 +11,11 @@ with sync_playwright() as p:
     pageBling = browser.new_page()
     pageBling.goto("https://www.bling.com.br/ctes.php#list")
     waitTimeout(2000)
-    pageBling.fill("input[id='username']", "") # Lembrar sempre de mascarar a senha e o e-mail pro GitHub...
+    pageBling.fill("input[id='username']", "assuntosdiversos1998@gmail.com") # Lembrar sempre de mascarar a senha e o e-mail pro GitHub...
     waitTimeout(1000)
-    pageBling.fill("input[id='senha']", "")
+    pageBling.fill("input[id='senha']", "Tfm1234@")
     waitTimeout(1000)
     pageBling.click("button[name='enviar']")
-    waitTimeout(1000)
     # warning_full_memory_delete = pageBling.locator("xpath=//html/body/div[5]/div[1]/div/i")
     # if(warning_full_memory_delete):
     #     warning_full_memory_delete.click()
